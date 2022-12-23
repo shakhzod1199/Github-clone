@@ -1,5 +1,5 @@
 {
-  "name": "starter-app-react",
+  "name": "react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -22,5 +22,17 @@
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^3.0.0",
     "vite": "^4.0.0"
-  }
+  },
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mukhriddin-dev/ReactJS-starter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mukhriddin-dev/ReactJS-starter/issues"
+  },
+  "homepage": "https://github.com/mukhriddin-dev/ReactJS-starter#readme",
+  "description": ""
 }
