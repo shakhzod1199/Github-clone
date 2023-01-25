@@ -1,0 +1,70 @@
+.Layout-main {
+    .UnderlineNav {
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            background-color: #fff;
+            padding: 5px 40px 0px 0px;
+
+            a {
+                display: flex;
+                align-items: center;
+                color: #24292f;
+                font-size: 14px;
+                cursor: pointer;
+                border-bottom: 2px solid transparent;
+                padding-bottom: 7px;
+
+                &:hover {
+                    span {
+                        background-color: #F0F2F4;
+                    }
+                }
+
+                &:focus {
+                    font-weight: 500;
+                    border-bottom: 2px solid #FD8C73;
+                }
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 4px 10px;
+                    border-radius: 7px;
+                    gap: 10px;
+
+                    p {
+                        margin: 0;
+                    }
+
+                    svg {
+                        color: #07854a !important;
+                        font-size: 16px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width:767px)  and (max-width:992px) {
+    .Layout-main {
+        .UnderlineNav {
+            nav {
+                padding: 5px 0px 0px !important;
+                gap: 0 !important;
+            }
+        }
+    }
+}
+@media screen and (max-width:767px) and (min-width:578px) {
+    .Layout-main {
+        .UnderlineNav {
+            nav {
+                gap: 0px;
+            }
+        }
+    }
+}

@@ -1,0 +1,131 @@
+.outlet {
+    padding: 20px 0px;
+}
+
+.container {
+    max-width: 1250px;
+}
+
+.Mainnav {
+    border-bottom: 1px solid #d0d7de;
+}
+
+.repos {
+    .starred {
+        box-shadow: none;
+
+        .star {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 5px 15px;
+            gap: 10px;
+            text-transform: capitalize;
+            font-size: 12px;
+            border: 1px solid #D5D8DA;
+            background-color: #f6f8fa;
+            color: #24292f;
+
+            &:hover {
+                background-color: #F3F4F6;
+            }
+
+            .fa-star {
+                font-size: 14px;
+            }
+        }
+
+        .down {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 10px;
+            text-transform: capitalize;
+            background-color: #f6f8fa;
+            border: 1px solid #D5D8DA;
+            color: #24292f;
+
+            &:hover {
+                background-color: #F3F4F6;
+            }
+        }
+        a{
+            &:hover{
+                color: red;
+            }
+        }
+
+    }
+}
+
+.formRepo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #d0d7de;
+    padding-bottom: 20px;
+
+    .form-filter {
+        display: flex;
+    }
+}
+
+.form-filter {
+    .drpFilter {
+        .dropdown {
+            .dropdown-menu {
+                li{
+                    cursor: pointer;
+                }
+                li:not(:first-child) {
+                    padding: 5px 40px !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:767px) and (max-width:992px) {
+    .Mainnav {
+        justify-content: end !important;
+        padding: 0px 20px !important;
+    }
+    .formRepo {
+        .form-filter {
+            width: 75%;
+            display: grid !important;
+            gap: 1rem !important;
+        }
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .navRepo {
+        display: none !important;
+    }
+
+    form {
+        flex-wrap: wrap-reverse;
+    }
+
+    .formRepo {
+        .form-filter {
+            width: 100% !important;
+            display: grid !important;
+            gap: 5px !important;
+        }
+    }
+}
+
+@media only screen and (max-width:575px) {
+    .Mainnav {
+        overflow-x: scroll;
+    }
+    .formRepo {
+        .form-filter {
+            width: 100% ;
+            display: grid !important;
+            gap: 5px !important;
+        }
+    }
+}
