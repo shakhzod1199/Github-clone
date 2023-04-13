@@ -32,7 +32,7 @@ const index = () => {
                   <MainNavbar user={user} />
                </div>
             </div>
-            <div className="outlet col-md col-sm-12">
+            <div className="outlet col-md-8 col-sm-12 col-12">
                <Outlet />
             </div>
          </div>

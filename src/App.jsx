@@ -1,11 +1,11 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar'
-import Home from './pages/Home'
-import About from './pages/About'
-import Footer from './components/Footer'
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import About from './pages/About';
+import Footer from './components/Footer';
 import NotFound from './pages/Notfound';
-import Repositories from './pages/Home/repositories';
+import Repositories from './pages/Home/Repositories';
 import Projects from './pages/Home/projects';
 import Packages from './pages/Home/packages';
 import Stars from './pages/Home/stars';

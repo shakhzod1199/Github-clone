@@ -13,11 +13,10 @@
 .repos {
     .starred {
         box-shadow: none;
-
         .star {
             display: flex;
             align-items: flex-start;
-            justify-content: center;
+            // justify-content: center;
             padding: 5px 15px;
             gap: 10px;
             text-transform: capitalize;

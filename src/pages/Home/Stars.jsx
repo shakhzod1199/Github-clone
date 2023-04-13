@@ -2,8 +2,8 @@ import React from 'react';
 
 const stars = () => {
     return (
-        <div>
-           stars 
+        <div className='d-flex justify-content-center align-items-center h-100 w-100'>
+           <h1>Not Found</h1>
         </div>
     );
 };
