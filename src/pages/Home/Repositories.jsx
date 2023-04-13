@@ -18,12 +18,15 @@ const repositories = () => {
     const searchRepo = repos.filter(e => {
         return e.name.toLowerCase().includes(value.toLowerCase())
     })
+
     const TypeRepo = searchRepo.filter(e => {
-        return type != ' ' ? e.visibility.toLowerCase().includes(type.toLowerCase()) : '';
+        return type.toLowerCase() === '' ? e : type != ' ' ? e.visibility.toLowerCase() === type.toLowerCase() : '';
     })
+    
     const Lang = TypeRepo.filter(e => {
-        return langs.toLowerCase() === 'all' ? e : langs != '' ? e.language?.toUpperCase() === langs.toUpperCase() : 'NotFound';
+        return langs.toLowerCase() === '' ? e : langs != ' ' ? e.language?.toLowerCase() === langs.toLowerCase() : '';
     })
+    console.log(Lang)
 
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
@@ -56,7 +59,7 @@ const repositories = () => {
                                 </button>
                                 <ul className="dropdown-menu border" aria-labelledby="dropdownMenuButton">
                                     <li className="dropdown-item border-bottom  disabled">Select type</li>
-                                    <li value='' className="dropdown-item border-bottom" onClick={(e) => setType(e.target.innerText)} >All</li>
+                                    <li value='' className="dropdown-item border-bottom" onClick={() => setType('')} >All</li>
                                     <li value='public' className="dropdown-item border-bottom" onClick={(e) => setType(e.target.innerText)} >Public</li>
                                     <li value='private' className="dropdown-item border-bottom" onClick={(e) => setType(e.target.innerText)} >Private</li>
                                     <li value='sources' className="dropdown-item border-bottom" onClick={(e) => setType(e.target.innerText)} >Sources</li>
@@ -78,7 +81,7 @@ const repositories = () => {
                                 </button>
                                 <ul className="dropdown-menu border select" aria-labelledby="dropdownMenuButton" >
                                     <li className="dropdown-item border-bottom  disabled">Select language</li>
-                                    <li value='' selected className="dropdown-item border-bottom" onClick={(e) => (setLangs(e.target.innerHTML))}>All</li>
+                                    <li value='' selected className="dropdown-item border-bottom" onClick={() => (setLangs(''))}>All</li>
                                     <li value='javascript' className="dropdown-item border-bottom" onClick={(e) => (setLangs(e.target.innerHTML))}>JavaScript</li>
                                     <li value='css' className="dropdown-item" onClick={(e) => (setLangs(e.target.innerHTML))}>Css</li>
                                 </ul>
